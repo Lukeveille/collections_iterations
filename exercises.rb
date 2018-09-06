@@ -9,7 +9,7 @@ colours = [:blue, :red, :green, :purple]
 words = {common: "occurring, found, or done often; prevalent.", assistant: "a person who ranks below a senior person.", precarious: "not securely held or in position; dangerously likely to fall or collapse."}
 movies = {"Goodfellas" => 1990, "Pulp Fiction" => 1994, "Twelve Monkeys" => 1995}
 cities = {toronto: "2.8 million", new_york_city: "8.5 million", chicago: "2.7 million"}
-names = {luke: 30, tish: 27, betts: 30, phillip: 33}
+names = {luke: 30, tish: 27, betts: 30, claudia: 22, phillip: 33}
 
 # Exercise 1
 puts coin
@@ -32,7 +32,17 @@ puts "--------------------------------------------"
 # Exercise 3
 artists[0, 2].each { |artist| puts "#{artist}" }
 movies.each { |movie, year| puts "#{movie} came out in #{year}" }
-reverse_names = names.sort_by {|name, age| age}.reverse
+reverse_names = names.sort_by { |name, age| age }.reverse
 puts reverse_names
 movies["Beauty and the Beast"] = [1991, 2017]
 puts movies["Beauty and the Beast"]
+
+puts "--------------------------------------------"
+
+# Exercise 4
+names.each { |name, age| if age < 30; puts "#{name} is only #{age} years old" end }
+oldest =  names.max_by { |names, age| age }
+puts oldest[1]
+puts coin.count('heads')
+artists.delete_at(2)
+cities[:boston] = "675 k"
