@@ -59,8 +59,38 @@ colours += [:teal, :pink]
 puts "--------------------------------------------"
 
 # Exercise 6
-movie_years = {1999: ["The Matrix", "Star Wars: Episode 1", "The Mummy"], 2009: ["Avatar", "Star Trek", "District 9"], 2019: ["How to Train Your Dragon 3", "Toy Story 4", "Star Wars: Episode 9"]}
+movie_years = {'1999': ["The Matrix", "Star Wars: Episode 1", "The Mummy"], '2009': ["Avatar", "Star Trek", "District 9"], '2019': ["How to Train Your Dragon 3", "Toy Story 4", "Star Wars: Episode 9"]}
 phone_numbers = [[1, 2, 3], [4, 5, 6], [7, 8, 9], ["*", 0, "#"]]
-country_info = [{name: "Canada", continent: "North America", is_island?: "No"},
+country_info = [
+    {name: "Canada", continent: "North America", is_island?: "No"},
     {name: "United States", continent: "North America", is_island?: "No"},
-    {name: "Jamaica", continent: "Carribean", is_island?: "Yes"}]
+    {name: "Jamaica", continent: "Carribean", is_island?: "Yes"}
+]
+
+# Exercise 7
+students = {
+    cohort1: 34,
+    cohort2: 42,
+    cohort3: 22
+}
+def display_cohort(hash, type)
+    hash.each { |cohort, students| puts "#{cohort}: #{students} #{type}"}
+end
+display_cohort(students, "students")
+
+students[:cohort4] = 43
+puts students.keys
+students.update(students) { |name, age| (age *= 1.05).to_i }
+puts students
+students.delete(:cohort2)
+puts students
+total = 0; students.each { |cohort, students| total += students }; puts total
+
+staff = {
+    cohort1: 4,
+    cohort2: 6,
+    cohort3: 10
+}
+display_cohort(staff, "staff")
+
+puts "--------------------------------------------"
