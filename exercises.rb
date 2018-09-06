@@ -55,3 +55,12 @@ names.each { |name, age| puts age < 30 ? "#{name} is young." : "#{name} is old."
 puts colours.reverse[0, 2].reverse
 names.update(names) { |name, age| age += 1 }; puts names
 colours += [:teal, :pink]
+
+puts "--------------------------------------------"
+
+# Exercise 6
+movie_years = {1999: ["The Matrix", "Star Wars: Episode 1", "The Mummy"], 2009: ["Avatar", "Star Trek", "District 9"], 2019: ["How to Train Your Dragon 3", "Toy Story 4", "Star Wars: Episode 9"]}
+phone_numbers = [[1, 2, 3], [4, 5, 6], [7, 8, 9], ["*", 0, "#"]]
+country_info = [{name: "Canada", continent: "North America", is_island?: "No"},
+    {name: "United States", continent: "North America", is_island?: "No"},
+    {name: "Jamaica", continent: "Carribean", is_island?: "Yes"}]
