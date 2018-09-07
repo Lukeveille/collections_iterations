@@ -18,16 +18,12 @@ puts ages.sort
 ages << 0
 print movies[:goodfellas]
 
-puts "--------------------------------------------"
-
 # Exercise 2
 puts fav_colours[fav_colours.length-1]
 cities[:boston] = 673000
 coin.reverse!
 puts cities[:toronto]
 artists.each { |artist| puts "I really enjoy listening to #{artist}." }
-
-puts "--------------------------------------------"
 
 # Exercise 3
 artists[0, 2].each { |artist| puts "#{artist}" }
@@ -37,8 +33,6 @@ puts reverse_names
 movies["Beauty and the Beast"] = [1991, 2017]
 puts movies["Beauty and the Beast"]
 
-puts "--------------------------------------------"
-
 # Exercise 4
 names.each { |name, age| if age < 30; puts "#{name} is only #{age} years old" end }
 oldest =  names.max_by { |names, age| age }
@@ -47,16 +41,12 @@ puts coin.count('heads')
 artists.delete_at(2)
 cities[:boston] = 675000
 
-puts "--------------------------------------------"
-
 # Exercise 5
 total = 0; cities.each { |city, population| total += population }
 names.each { |name, age| puts age < 30 ? "#{name} is young." : "#{name} is old." }
 puts colours.reverse[0, 2].reverse
 names.update(names) { |name, age| age += 1 }; puts names
 colours += [:teal, :pink]
-
-puts "--------------------------------------------"
 
 # Exercise 6
 movie_years = {'1999': ["The Matrix", "Star Wars: Episode 1", "The Mummy"], '2009': ["Avatar", "Star Trek", "District 9"], '2019': ["How to Train Your Dragon 3", "Toy Story 4", "Star Wars: Episode 9"]}
@@ -86,8 +76,6 @@ non_island_countries = (country_info.map { |country| next if country[:is_island?
 puts non_island_countries
 puts triple_numbers
 
-puts "--------------------------------------------"
-
 # Exercise 8
 
 def total(array)
@@ -101,10 +89,7 @@ a_collecttion_of_numbers = [22, 65, 18, 64, 97, 67, 88, 99, 4]
 puts total(expenses)
 puts total(a_collecttion_of_numbers)
 
-puts "--------------------------------------------"
-
 # Exercise 9
-
 grocery_list = ["avacados", "broccoli", "carrots", "bread", "salmon", "green peppers"]
 def print_list(list)
     list.each { |item| puts "* #{item}" }
@@ -123,10 +108,7 @@ print_list(grocery_list)
 grocery_list.delete("salmon")
 print_list(grocery_list)
 
-puts "--------------------------------------------"
-
 # Exercise 10
-
 students = {
     cohort1: 34,
     cohort2: 42,
@@ -151,5 +133,3 @@ staff = {
     cohort3: 5
 }
 display_cohort(staff, "staff")
-
-puts "--------------------------------------------"
