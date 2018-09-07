@@ -1,12 +1,13 @@
-100.times do |n|
+numbers = (0...100)
+
+numbers.map do |n|
     n += 1
     if n % 15 == 0
-        puts "BitMaker"
+        n = "BitMaker"
     elsif n % 3 == 0
-        puts "Bit"
+        n = "Bit"
     elsif n % 5 == 0
-        puts "Maker"
-    else
-        puts n
+        n = "Maker"  
     end
+    puts n
 end
