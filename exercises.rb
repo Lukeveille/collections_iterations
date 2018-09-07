@@ -68,6 +68,42 @@ country_info = [
 ]
 
 # Exercise 7
+skateboard = Array.new()
+20.times { |n| skateboard[n] = "I will not skateboard in the halls" }
+puts skateboard
+
+numbers = Array.new()
+50.times { |n| numbers[n] = n+1 }
+
+total = 0
+numbers.each { |n| total += n }
+
+triple_numbers = Array.new()
+numbers.map { |num| triple_numbers[num-1] = [num, num, num] }
+
+non_island_countries = (country_info.map { |country| next if country[:is_island?] == "Yes"; country[:name] }).compact
+
+puts non_island_countries
+puts triple_numbers
+
+puts "--------------------------------------------"
+
+# Exercise 8
+
+def total(array)
+    total = 0
+    array.each { |expense| total += expense }
+    return total
+end
+
+expenses = [25.5, 5.50, 3.50, 7.11, 18.65, 19.99, 89.69, 1000]
+a_collecttion_of_numbers = [22, 65, 18, 64, 97, 67, 88, 99, 4]
+puts total(expenses)
+puts total(a_collecttion_of_numbers)
+
+puts "--------------------------------------------"
+
+# Exercise 10
 students = {
     cohort1: 34,
     cohort2: 42,
@@ -89,7 +125,7 @@ total = 0; students.each { |cohort, students| total += students }; puts total
 staff = {
     cohort1: 4,
     cohort2: 6,
-    cohort3: 10
+    cohort3: 5
 }
 display_cohort(staff, "staff")
 
