@@ -103,7 +103,30 @@ puts total(a_collecttion_of_numbers)
 
 puts "--------------------------------------------"
 
+# Exercise 9
+
+grocery_list = ["avacados", "broccoli", "carrots", "bread", "salmon", "green peppers"]
+def print_list(list)
+    list.each { |item| puts "* #{item}" }
+end
+print_list(grocery_list)
+grocery_list << "rice"
+print_list(grocery_list)
+if grocery_list.include? "bananas"
+    puts "You need to pick up bananas"
+else
+    puts "You don't need to pick up bananas today"
+end
+puts grocery_list[1]
+grocery_list.sort!
+print_list(grocery_list)
+grocery_list.delete("salmon")
+print_list(grocery_list)
+
+puts "--------------------------------------------"
+
 # Exercise 10
+
 students = {
     cohort1: 34,
     cohort2: 42,
